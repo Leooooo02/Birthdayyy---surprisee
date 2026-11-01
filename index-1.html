@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08030a">
+<title>Happy Birthday, Maasi ♡</title>
+<style>
+:root{--pink:#ff4fa3;--hot:#ff168c;--pale:#ffd2e8;--ink:#08030a;--panel:rgba(22,7,20,.78);--muted:#e9b9d2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#3b0a2c 0,#120611 42%,#050307 100%);color:#fff5fb;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(#ff9acb 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:47px 47px,91px 91px;background-position:0 0,22px 35px;z-index:-1}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:13px 12px;background:rgba(5,2,7,.88);backdrop-filter:blur(14px);border-bottom:1px solid #ff4fa355;box-shadow:0 5px 28px #ff168c12}
+.nav a{padding:9px 13px;border-radius:999px;color:#ffc0e0;font-size:.92rem;transition:.2s}
+.nav a:hover,.nav a.active{background:#ff168c1c;color:#fff;box-shadow:0 0 18px #ff168c35}
+section{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:76px 20px;position:relative;scroll-margin-top:65px}
+.wrap{width:min(1050px,100%);margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;color:#ff9bcd;font:600 .76rem Arial,sans-serif}
+h1,h2,.script{font-family:'Brush Script MT','Segoe Script','URW Chancery L',cursive;font-weight:500}
+h1{font-size:clamp(3.5rem,10vw,7.8rem);line-height:.92;margin:18px 0;color:#ff8cc5;text-shadow:0 0 12px #ff168c,0 0 42px #ff168c6b}
+h2{font-size:clamp(2.7rem,7vw,5rem);color:#ff8cc5;text-shadow:0 0 20px #ff168c55;margin:8px 0 20px}
+p{line-height:1.85;color:#f7dce9;font-size:1.04rem}
+.center{text-align:center}
+.hero{min-height:calc(100vh - 58px);text-align:center;overflow:hidden}
+.hero:before,.hero:after{position:absolute;content:"";pointer-events:none}
+.hero:before{width:370px;height:370px;left:-180px;top:8%;border-radius:50%;background:#ff168c20;filter:blur(55px)}
+.hero:after{width:400px;height:400px;right:-200px;bottom:0;border-radius:50%;background:#ff168c1e;filter:blur(60px)}
+.hero-content{position:relative;z-index:1;max-width:850px}
+.crown{font-size:2.6rem;filter:drop-shadow(0 0 12px #ff4fa3)}
+.subtitle{font-size:clamp(1.05rem,3vw,1.45rem);max-width:650px;margin:22px auto;color:#ffe0ef}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #ff7bbb;border-radius:999px;padding:13px 23px;background:#ff168c12;color:#fff;box-shadow:0 0 22px #ff168c30;transition:transform .2s,box-shadow .2s}
+.pill:hover{transform:translateY(-3px);box-shadow:0 0 28px #ff168c70}
+.pink{color:#ff8cc5}
+.heart{display:inline-block;color:#ff4fa3;animation:beat 1.5s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.floating{position:absolute;opacity:.45;animation:float 8s ease-in-out infinite;pointer-events:none}
+.f1{left:8%;top:18%;font-size:2rem}.f2{right:9%;top:27%;font-size:2.5rem;animation-delay:1s}.f3{left:15%;bottom:16%;font-size:1.8rem;animation-delay:2s}.f4{right:14%;bottom:14%;font-size:2rem;animation-delay:3s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(8deg)}}
+.panel{background:linear-gradient(135deg,#1b0a19dd,#08050beF);border:1px solid #ff66ae55;border-radius:25px;padding:clamp(24px,5vw,52px);box-shadow:0 0 45px #ff168c16,inset 0 0 30px #ff168c08}
+.letter{max-width:850px;margin:auto;position:relative}
+.letter p{font-size:1.1rem}
+.signature{font-family:'Brush Script MT','Segoe Script',cursive;color:#ff8cc5;font-size:2rem;text-align:right;margin-top:25px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.memory,.reason{background:linear-gradient(150deg,#271023,#100710);border:1px solid #ff5aa344;border-radius:20px;padding:25px 20px;text-align:center;transition:.25s}
+.memory:hover,.reason:hover{transform:translateY(-5px);border-color:#ff72b8;box-shadow:0 10px 30px #ff168c20}
+.bigemoji{font-size:3rem;display:block;margin-bottom:12px;filter:drop-shadow(0 0 12px #ff168c30)}
+.memory h3,.reason h3{color:#ffb6d9;font-size:1.25rem;margin:8px 0}
+.memory p,.reason p{font-size:.94rem;margin-bottom:0}
+.reveal{display:none;margin:25px auto 0;max-width:650px;padding:28px;border:1px dashed #ff80be;border-radius:20px;background:#ff168c12;animation:appear .5s ease}
+.reveal.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.gift{font-size:clamp(5rem,15vw,9rem);display:block;filter:drop-shadow(0 0 28px #ff168c);animation:float 4s ease-in-out infinite}
+.footer{text-align:center;padding:28px 20px 42px;color:#e8a6c8;border-top:1px solid #ff4fa333;font-size:.95rem}
+.footer strong{display:block;font:2rem 'Brush Script MT','Segoe Script',cursive;color:#ff8cc5;margin-top:8px}
+.small{font-size:.85rem;color:#dca4c2}
+hr{border:0;border-top:1px solid #ff6bad33;margin:25px 0}
+@media(max-width:700px){.nav{gap:2px;padding:8px 5px}.nav a{font-size:.78rem;padding:8px 9px}.grid{grid-template-columns:1fr}.grid.three{grid-template-columns:1fr}.hero{min-height:85vh}section{padding:62px 16px}.f1{left:4%}.f2{right:4%}.panel{border-radius:19px}}
+@media(min-width:701px) and (max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Birthday website navigation">
+  <a href="#home" class="active">⌂ Home</a>
+  <a href="#letter">♡ My Letter</a>
+  <a href="#memories">✿ Memories</a>
+  <a href="#reasons">☆ For You</a>
+  <a href="#surprise">🎁 Surprise</a>
+  <a href="#wishes">✧ Wishes</a>
+</nav>
+
+<section id="home" class="hero">
+  <span class="floating f1">♡</span><span class="floating f2">✧</span><span class="floating f3">🌹</span><span class="floating f4">♡</span>
+  <div class="wrap hero-content">
+    <div class="crown">♕</div>
+    <div class="eyebrow">A little website made with a whole lot of love</div>
+    <h1>Happy Birthday<br><span>Maasi</span> <span class="heart">♡</span></h1>
+    <p class="subtitle">To the sweetest Maasi in the world — the one who has loved me like her own little boy, since the days when my biggest happiness was a new toy. 🧸</p>
+    <a class="pill" href="#letter">Open your little surprise <span class="heart">♥</span></a>
+    <p class="small" style="margin-top:30px">Made especially for you, with love from Shaurya</p>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow">A letter from my heart</div><h2>Dear Maasi ♡</h2></div>
+    <article class="panel letter">
+      <p>Happy Birthday to you, Maasi! 💗</p>
+      <p>I don't think I can ever explain in a few words how special you are to me. Since my childhood, you have filled my world with so much love, happiness and surprises. I still remember how you used to gift me toys and make me feel like the luckiest little kid in the world.</p>
+      <p>But the best gift you have ever given me isn't a toy or a surprise — it's <strong class="pink">your love</strong>. You have always stood by me, helped me whenever I was in trouble, and made things feel easier just by being there.</p>
+      <p>Even now, when I'm growing up, you still see your little boy in me. And honestly, a part of me will always be that little kid who feels safe, loved and happy because he has a Maasi like you.</p>
+      <p>Thank you for loving me like a mother, for caring about me, and for being one of the most beautiful parts of my life. I hope I can make you proud and give you even a little of the happiness you have given me.</p>
+      <p>May your life be filled with health, peace, laughter, love and countless reasons to smile. You deserve all the beautiful things this world has to offer.</p>
+      <div class="signature">Love you endlessly, Maasi ♡<br>— Your Shaurya</div>
+    </article>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow">Little moments, big love</div><h2>Our Sweet Memories 🧸</h2><p>Some memories stay in the heart forever. These are little reminders of what you mean to me.</p></div>
+    <div class="grid">
+      <article class="memory"><span class="bigemoji">🧸</span><h3>The Toy Surprises</h3><p>Every toy you gifted me became more than a toy — it became a memory of how you always found ways to make me happy.</p></article>
+      <article class="memory"><span class="bigemoji">💗</span><h3>Your Mother-Like Love</h3><p>You have always cared for me with a love that makes me feel protected, understood and deeply special.</p></article>
+      <article class="memory"><span class="bigemoji">🌷</span><h3>My Problem-Solver</h3><p>Whenever life gets difficult, you help me find a way through. Your support means more than I can say.</p></article>
+      <article class="memory"><span class="bigemoji">🎁</span><h3>Unexpected Happiness</h3><p>Your surprises remind me that you think of me, even when I least expect it. That feeling is priceless.</p></article>
+      <article class="memory"><span class="bigemoji">✨</span><h3>Your Little Boy</h3><p>I'm growing up, but with you I'll always have a place where I can still be your little boy.</p></article>
+      <article class="memory"><span class="bigemoji">🏡</span><h3>A Safe Place</h3><p>Your kindness makes ordinary days brighter and hard days a little easier. Thank you for being you.</p></article>
+    </div>
+    <p class="center small">You can add your own photos here later by sharing them with the person who edits this website. ♡</p>
+  </div>
+</section>
+
+<section id="reasons">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow">A few things I hope you always know</div><h2>Why You're So Special ♡</h2><p>It's impossible to fit all your goodness into one page, but here are a few reasons.</p></div>
+    <div class="grid">
+      <article class="reason"><span class="bigemoji">♡</span><h3>You love without limits</h3><p>You make me feel loved without needing a reason.</p></article>
+      <article class="reason"><span class="bigemoji">🌹</span><h3>You have a kind heart</h3><p>Your sweetness is one of the things I admire most about you.</p></article>
+      <article class="reason"><span class="bigemoji">🫶</span><h3>You are always there</h3><p>When I need help, I know I can count on you.</p></article>
+      <article class="reason"><span class="bigemoji">🎀</span><h3>You make life brighter</h3><p>Your little surprises turn simple moments into happy memories.</p></article>
+      <article class="reason"><span class="bigemoji">🌟</span><h3>You believe in me</h3><p>Your care gives me courage to keep growing and doing better.</p></article>
+      <article class="reason"><span class="bigemoji">👑</span><h3>You're one of a kind</h3><p>No one could ever take your special place in my heart.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="surprise">
+  <div class="wrap center">
+    <div class="eyebrow">Pssst… there's something for you</div><h2>Your Birthday Surprise 🎁</h2>
+    <p>Maasi, this little gift doesn't need wrapping paper. It comes straight from my heart.</p>
+    <span class="gift" aria-hidden="true">🎁</span>
+    <button class="pill" id="revealBtn" type="button">Open your surprise ♡</button>
+    <div class="reveal" id="revealMessage" aria-live="polite">
+      <div style="font-size:2.2rem">💗🌹💗</div>
+      <h2 style="font-size:2.8rem;margin:8px 0">A promise from me</h2>
+      <p>Dear Maasi, I'll always be grateful for the way you love me. I'll keep trying to make you proud, keep your love close to my heart, and never forget all the little things you've done for me. Today, I hope you feel even a fraction of the happiness you have given me.</p>
+      <p class="pink" style="font-size:1.35rem">You are loved more than words can say. ♡</p>
+      <div style="font-size:1.8rem">🎂✨🧸</div>
+    </div>
+  </div>
+</section>
+
+<section id="wishes">
+  <div class="wrap">
+    <div class="panel center">
+      <div class="crown">♕</div><div class="eyebrow">For the queen of my heart</div>
+      <h2>My Birthday Wishes For You</h2>
+      <p>May your mornings begin with peace, your days be filled with reasons to smile, and your nights bring you comfort. May every kind thing you have done for others find its way back to you multiplied.</p>
+      <p>May you always stay healthy, happy, loved and surrounded by people who value your beautiful heart. May your dreams come true one by one, and may this new year of your life bring you more joy than you can imagine.</p>
+      <hr>
+      <h2 style="font-size:clamp(2.6rem,7vw,4.5rem)">Happy Birthday, Maasi! <span class="heart">♡</span></h2>
+      <p>Thank you for being my second mother, my supporter, my problem-solver and my forever-sweet Maasi.</p>
+      <p class="signature" style="text-align:center">With all my love,<br>Made by Shaurya ♡</p>
+      <a href="#home" class="pill">Back to the beginning ↑</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  A tiny website for someone with a huge place in my heart.
+  <strong>Made with love by Shaurya ♡</strong>
+</footer>
+<script>
+const links=[...document.querySelectorAll('.nav a')];
+const sections=[...document.querySelectorAll('section')];
+function updateNav(){let current='home';for(const s of sections){if(window.scrollY>=s.offsetTop-150)current=s.id}links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+document.getElementById('revealBtn').addEventListener('click',function(){
+ const box=document.getElementById('revealMessage');box.classList.toggle('show');
+ this.textContent=box.classList.contains('show')?'Your surprise is open ♡':'Open your surprise ♡';
+ if(box.classList.contains('show'))box.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+</script>
+</body>
+</html>
